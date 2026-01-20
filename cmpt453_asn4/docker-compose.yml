@@ -1,0 +1,26 @@
+version: '3.9'
+
+services:
+  flutter-web:
+    build:
+      context: . # Flutter web Dockerfile is in the root directory
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80" # Map Flutter web's port 80 to localhost:3000
+    depends_on:
+      - flutter-server # Ensure the server starts first
+    restart: always # Automatically restart if the service crashes
+
+  flutter-server:
+    build:
+      context: ./server # Flutter server Dockerfile is in the 'server' directory
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080" # Map Flutter server's port 8080 to localhost:8080
+    restart: always # Automatically restart if the service crashes
+    healthcheck: # Add a health check to ensure the server is running
+      test: ["CMD", "curl", "-f", "http://localhost:8080"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
