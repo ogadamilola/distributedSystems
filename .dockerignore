@@ -1,0 +1,20 @@
+# Ignore target directory to avoid copying built files
+target
+
+# Ignore IDE and project files
+.idea
+*.iml
+
+# Ignore git repository files
+.git
+.gitignore
+
+# Ignore Maven wrapper files
+# .mvn
+# mvnw
+# mvnw.cmd
+
+# Other unnecessary files
+Dockerfile.server
+Dockerfile.client
+README.md
