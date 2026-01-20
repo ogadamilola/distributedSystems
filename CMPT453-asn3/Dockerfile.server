@@ -1,0 +1,23 @@
+# Use an official OpenJDK image as a base
+FROM openjdk:18-jdk-slim
+
+# Install Maven
+RUN apt-get update && apt-get install -y maven
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the project files
+COPY . .
+
+# Run the compile step to generate sources and compile classes
+RUN mvn clean compile -Pserver
+
+# Package the application with the 'server' profile to create the server JAR
+RUN mvn package -Pserver -DskipTests
+
+# Expose the gRPC server port
+EXPOSE 8080
+
+# Run the ChatServer
+CMD ["java", "-jar", "target/CMPT453-asn3-1.0-SNAPSHOT.jar"]

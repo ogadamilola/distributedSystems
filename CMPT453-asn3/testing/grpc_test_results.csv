@@ -1,0 +1,309 @@
+test_case,request_id,status_code,response,latency
+Small Payload,1,OK,Message sent,0.0
+Small Payload,2,OK,Message sent,0.0
+Small Payload,3,OK,Message sent,0.0010001659393310547
+Small Payload,4,OK,Message sent,0.0
+Small Payload,5,OK,Message sent,0.001001119613647461
+Small Payload,6,OK,Message sent,0.0
+Small Payload,7,OK,Message sent,0.0009989738464355469
+Small Payload,8,OK,Message sent,0.0
+Small Payload,9,OK,Message sent,0.0
+Small Payload,10,OK,Message sent,0.001001596450805664
+Small Payload,11,OK,Message sent,0.0
+Small Payload,12,OK,Message sent,0.0
+Small Payload,13,OK,Message sent,0.0009989738464355469
+Small Payload,14,OK,Message sent,0.0
+Small Payload,15,OK,Message sent,0.0
+Small Payload,16,OK,Message sent,0.001001119613647461
+Small Payload,17,OK,Message sent,0.0
+Small Payload,18,OK,Message sent,0.0
+Small Payload,19,OK,Message sent,0.0010056495666503906
+Small Payload,20,OK,Message sent,0.0
+Small Payload,21,OK,Message sent,0.0010004043579101562
+Small Payload,22,OK,Message sent,0.0010030269622802734
+Small Payload,23,OK,Message sent,0.0
+Small Payload,24,OK,Message sent,0.0009982585906982422
+Small Payload,25,OK,Message sent,0.0009982585906982422
+Small Payload,26,OK,Message sent,0.0
+Small Payload,27,OK,Message sent,0.0
+Small Payload,28,OK,Message sent,0.0009992122650146484
+Small Payload,29,OK,Message sent,0.0
+Small Payload,30,OK,Message sent,0.0
+Small Payload,31,OK,Message sent,0.0009989738464355469
+Small Payload,32,OK,Message sent,0.0
+Small Payload,33,OK,Message sent,0.0
+Small Payload,34,OK,Message sent,0.0009996891021728516
+Small Payload,35,OK,Message sent,0.0
+Small Payload,36,OK,Message sent,0.0
+Small Payload,37,OK,Message sent,0.001001119613647461
+Small Payload,38,OK,Message sent,0.0
+Small Payload,39,OK,Message sent,0.0
+Small Payload,40,OK,Message sent,0.0010006427764892578
+Small Payload,41,OK,Message sent,0.0
+Small Payload,42,OK,Message sent,0.0
+Small Payload,43,OK,Message sent,0.0
+Small Payload,44,OK,Message sent,0.0010008811950683594
+Small Payload,45,OK,Message sent,0.0
+Small Payload,46,OK,Message sent,0.0
+Small Payload,47,OK,Message sent,0.0009996891021728516
+Small Payload,48,OK,Message sent,0.0
+Small Payload,49,OK,Message sent,0.0
+Small Payload,50,OK,Message sent,0.001001596450805664
+Large Payload,1,OK,Message sent,0.0010113716125488281
+Large Payload,2,OK,Message sent,0.0
+Large Payload,3,OK,Message sent,0.0
+Large Payload,4,OK,Message sent,0.0015044212341308594
+Large Payload,5,OK,Message sent,0.0
+Large Payload,6,OK,Message sent,0.0
+Large Payload,7,OK,Message sent,0.001005411148071289
+Large Payload,8,OK,Message sent,0.0
+Large Payload,9,OK,Message sent,0.00099945068359375
+Large Payload,10,OK,Message sent,0.0
+Large Payload,11,OK,Message sent,0.001001596450805664
+Large Payload,12,OK,Message sent,0.0
+Large Payload,13,OK,Message sent,0.0010030269622802734
+Large Payload,14,OK,Message sent,0.0009982585906982422
+Large Payload,15,OK,Message sent,0.0010154247283935547
+Large Payload,16,OK,Message sent,0.0
+Large Payload,17,OK,Message sent,0.0009822845458984375
+Large Payload,18,OK,Message sent,0.0
+Large Payload,19,OK,Message sent,0.0010008811950683594
+Large Payload,20,OK,Message sent,0.0
+Large Payload,21,OK,Message sent,0.0009992122650146484
+Large Payload,22,OK,Message sent,0.0
+Large Payload,23,OK,Message sent,0.0010004043579101562
+Large Payload,24,OK,Message sent,0.0
+Large Payload,25,OK,Message sent,0.0010006427764892578
+Large Payload,26,OK,Message sent,0.0
+Large Payload,27,OK,Message sent,0.0009992122650146484
+Large Payload,28,OK,Message sent,0.0
+Large Payload,29,OK,Message sent,0.0009999275207519531
+Large Payload,30,OK,Message sent,0.0
+Large Payload,31,OK,Message sent,0.0010006427764892578
+Large Payload,32,OK,Message sent,0.001001119613647461
+Large Payload,33,OK,Message sent,0.0
+Large Payload,34,OK,Message sent,0.00099945068359375
+Large Payload,35,OK,Message sent,0.0
+Large Payload,36,OK,Message sent,0.0010004043579101562
+Large Payload,37,OK,Message sent,0.0
+Large Payload,38,OK,Message sent,0.0
+Large Payload,39,OK,Message sent,0.0009975433349609375
+Large Payload,40,OK,Message sent,0.0
+Large Payload,41,OK,Message sent,0.0010027885437011719
+Large Payload,42,OK,Message sent,0.0010027885437011719
+Large Payload,43,OK,Message sent,0.0
+Large Payload,44,OK,Message sent,0.0010006427764892578
+Large Payload,45,OK,Message sent,0.0
+Large Payload,46,OK,Message sent,0.0009996891021728516
+Large Payload,47,OK,Message sent,0.0
+Large Payload,48,OK,Message sent,0.00099945068359375
+Large Payload,49,OK,Message sent,0.0
+Large Payload,50,OK,Message sent,0.00099945068359375
+Concurrent Requests GRPC,1,OK,Message sent,0.0009834766387939453
+Concurrent Requests GRPC,2,OK,Message sent,0.0019855499267578125
+Concurrent Requests GRPC,3,OK,Message sent,0.002010822296142578
+Concurrent Requests GRPC,4,OK,Message sent,0.0030052661895751953
+Concurrent Requests GRPC,5,OK,Message sent,0.002003192901611328
+Concurrent Requests GRPC,6,OK,Message sent,0.0030088424682617188
+Concurrent Requests GRPC,7,OK,Message sent,0.002000093460083008
+Concurrent Requests GRPC,8,OK,Message sent,0.002992391586303711
+Concurrent Requests GRPC,9,OK,Message sent,0.0009922981262207031
+Concurrent Requests GRPC,10,OK,Message sent,0.001990079879760742
+Concurrent Requests GRPC,11,OK,Message sent,0.002989530563354492
+Concurrent Requests GRPC,12,OK,Message sent,0.003000974655151367
+Concurrent Requests GRPC,13,OK,Message sent,0.00099945068359375
+Concurrent Requests GRPC,14,OK,Message sent,0.004001617431640625
+Concurrent Requests GRPC,15,OK,Message sent,0.0029993057250976562
+Concurrent Requests GRPC,16,OK,Message sent,0.0019998550415039062
+Concurrent Requests GRPC,17,OK,Message sent,0.003001689910888672
+Concurrent Requests GRPC,18,OK,Message sent,0.005002498626708984
+Concurrent Requests GRPC,19,OK,Message sent,0.003021240234375
+Concurrent Requests GRPC,20,OK,Message sent,0.0019989013671875
+Concurrent Requests GRPC,21,OK,Message sent,0.0019989013671875
+Concurrent Requests GRPC,22,OK,Message sent,0.003983020782470703
+Concurrent Requests GRPC,23,OK,Message sent,0.003983020782470703
+Concurrent Requests GRPC,24,OK,Message sent,0.004998207092285156
+Concurrent Requests GRPC,25,OK,Message sent,0.003996372222900391
+Concurrent Requests GRPC,26,OK,Message sent,0.004998207092285156
+Concurrent Requests GRPC,27,OK,Message sent,0.005005598068237305
+Concurrent Requests GRPC,28,OK,Message sent,0.00299835205078125
+Concurrent Requests GRPC,29,OK,Message sent,0.003001689910888672
+Concurrent Requests GRPC,30,OK,Message sent,0.0060002803802490234
+Concurrent Requests GRPC,31,OK,Message sent,0.004007101058959961
+Concurrent Requests GRPC,32,OK,Message sent,0.003999471664428711
+Concurrent Requests GRPC,33,OK,Message sent,0.0059967041015625
+Concurrent Requests GRPC,34,OK,Message sent,0.004000425338745117
+Concurrent Requests GRPC,35,OK,Message sent,0.00599980354309082
+Concurrent Requests GRPC,36,OK,Message sent,0.0029985904693603516
+Concurrent Requests GRPC,37,OK,Message sent,0.005998373031616211
+Concurrent Requests GRPC,38,OK,Message sent,0.002992868423461914
+Concurrent Requests GRPC,39,OK,Message sent,0.00701141357421875
+Concurrent Requests GRPC,40,OK,Message sent,0.0029969215393066406
+Concurrent Requests GRPC,41,OK,Message sent,0.006015777587890625
+Concurrent Requests GRPC,42,OK,Message sent,0.0039980411529541016
+Concurrent Requests GRPC,43,OK,Message sent,0.0039980411529541016
+Concurrent Requests GRPC,44,OK,Message sent,0.00299835205078125
+Concurrent Requests GRPC,45,OK,Message sent,0.002000093460083008
+Concurrent Requests GRPC,46,OK,Message sent,0.003999233245849609
+Concurrent Requests GRPC,47,OK,Message sent,0.0019986629486083984
+Concurrent Requests GRPC,48,OK,Message sent,0.0019986629486083984
+Concurrent Requests GRPC,49,OK,Message sent,0.002018451690673828
+Concurrent Requests GRPC,50,OK,Message sent,0.002018451690673828
+Arrival Rate: 1 rps,1,OK,Message sent,0.0009865760803222656
+Arrival Rate: 1 rps,2,OK,Message sent,0.0
+Arrival Rate: 1 rps,3,OK,Message sent,0.0
+Arrival Rate: 1 rps,4,OK,Message sent,0.0
+Arrival Rate: 1 rps,5,OK,Message sent,0.0005085468292236328
+Arrival Rate: 1 rps,6,OK,Message sent,0.0
+Arrival Rate: 1 rps,7,OK,Message sent,0.0
+Arrival Rate: 1 rps,8,OK,Message sent,0.0
+Arrival Rate: 1 rps,9,OK,Message sent,0.0005099773406982422
+Arrival Rate: 1 rps,10,OK,Message sent,0.0
+Arrival Rate: 1 rps,11,OK,Message sent,0.0005156993865966797
+Arrival Rate: 1 rps,12,OK,Message sent,0.0
+Arrival Rate: 1 rps,13,OK,Message sent,0.0
+Arrival Rate: 1 rps,14,OK,Message sent,0.0010075569152832031
+Arrival Rate: 1 rps,15,OK,Message sent,0.0005040168762207031
+Arrival Rate: 1 rps,16,OK,Message sent,0.0
+Arrival Rate: 1 rps,17,OK,Message sent,0.0
+Arrival Rate: 1 rps,18,OK,Message sent,0.0
+Arrival Rate: 1 rps,19,OK,Message sent,0.0005080699920654297
+Arrival Rate: 1 rps,20,OK,Message sent,0.0
+Arrival Rate: 1 rps,21,OK,Message sent,0.0
+Arrival Rate: 1 rps,22,OK,Message sent,0.0
+Arrival Rate: 1 rps,23,OK,Message sent,0.0010056495666503906
+Arrival Rate: 1 rps,24,OK,Message sent,0.0
+Arrival Rate: 1 rps,25,OK,Message sent,0.0
+Arrival Rate: 1 rps,26,OK,Message sent,0.0
+Arrival Rate: 1 rps,27,OK,Message sent,0.0010077953338623047
+Arrival Rate: 1 rps,28,OK,Message sent,0.0
+Arrival Rate: 1 rps,29,OK,Message sent,0.0
+Arrival Rate: 1 rps,30,OK,Message sent,0.0
+Arrival Rate: 1 rps,31,OK,Message sent,0.0
+Arrival Rate: 1 rps,32,OK,Message sent,0.0
+Arrival Rate: 1 rps,33,OK,Message sent,0.0
+Arrival Rate: 1 rps,34,OK,Message sent,0.0005085468292236328
+Arrival Rate: 1 rps,35,OK,Message sent,0.0
+Arrival Rate: 1 rps,36,OK,Message sent,0.0
+Arrival Rate: 1 rps,37,OK,Message sent,0.0
+Arrival Rate: 1 rps,38,OK,Message sent,0.0
+Arrival Rate: 1 rps,39,OK,Message sent,0.0
+Arrival Rate: 1 rps,40,OK,Message sent,0.0
+Arrival Rate: 1 rps,41,OK,Message sent,0.003026247024536133
+Arrival Rate: 1 rps,42,OK,Message sent,0.0
+Arrival Rate: 1 rps,43,OK,Message sent,0.0
+Arrival Rate: 1 rps,44,OK,Message sent,0.0
+Arrival Rate: 1 rps,45,OK,Message sent,0.0
+Arrival Rate: 1 rps,46,OK,Message sent,0.0
+Arrival Rate: 1 rps,47,OK,Message sent,0.0
+Arrival Rate: 1 rps,48,OK,Message sent,0.0
+Arrival Rate: 1 rps,49,OK,Message sent,0.0
+Arrival Rate: 1 rps,50,OK,Message sent,0.0
+Arrival Rate: 10 rps,1,OK,Message sent,0.0
+Arrival Rate: 10 rps,2,OK,Message sent,0.0
+Arrival Rate: 10 rps,3,OK,Message sent,0.0
+Arrival Rate: 10 rps,4,OK,Message sent,0.0
+Arrival Rate: 10 rps,5,OK,Message sent,0.0
+Arrival Rate: 10 rps,6,OK,Message sent,0.0
+Arrival Rate: 10 rps,7,OK,Message sent,0.0
+Arrival Rate: 10 rps,8,OK,Message sent,0.0
+Arrival Rate: 10 rps,9,OK,Message sent,0.0010142326354980469
+Arrival Rate: 10 rps,10,OK,Message sent,0.0
+Arrival Rate: 10 rps,11,OK,Message sent,0.0
+Arrival Rate: 10 rps,12,OK,Message sent,0.0005095005035400391
+Arrival Rate: 10 rps,13,OK,Message sent,0.0020630359649658203
+Arrival Rate: 10 rps,14,OK,Message sent,0.0
+Arrival Rate: 10 rps,15,OK,Message sent,0.0
+Arrival Rate: 10 rps,16,OK,Message sent,0.0
+Arrival Rate: 10 rps,17,OK,Message sent,0.0
+Arrival Rate: 10 rps,18,OK,Message sent,0.0
+Arrival Rate: 10 rps,19,OK,Message sent,0.0
+Arrival Rate: 10 rps,20,OK,Message sent,0.0
+Arrival Rate: 10 rps,21,OK,Message sent,0.0
+Arrival Rate: 10 rps,22,OK,Message sent,0.0
+Arrival Rate: 10 rps,23,OK,Message sent,0.0
+Arrival Rate: 10 rps,24,OK,Message sent,0.0
+Arrival Rate: 10 rps,25,OK,Message sent,0.0
+Arrival Rate: 10 rps,26,OK,Message sent,0.0
+Arrival Rate: 10 rps,27,OK,Message sent,0.0005502700805664062
+Arrival Rate: 10 rps,28,OK,Message sent,0.002106904983520508
+Arrival Rate: 10 rps,29,OK,Message sent,0.0
+Arrival Rate: 10 rps,30,OK,Message sent,0.0008969306945800781
+Arrival Rate: 10 rps,31,OK,Message sent,0.0
+Arrival Rate: 10 rps,32,OK,Message sent,0.0005114078521728516
+Arrival Rate: 10 rps,33,OK,Message sent,0.0015947818756103516
+Arrival Rate: 10 rps,34,OK,Message sent,0.0
+Arrival Rate: 10 rps,35,OK,Message sent,0.0
+Arrival Rate: 10 rps,36,OK,Message sent,0.0
+Arrival Rate: 10 rps,37,OK,Message sent,0.0
+Arrival Rate: 10 rps,38,OK,Message sent,0.0010082721710205078
+Arrival Rate: 10 rps,39,OK,Message sent,0.0010178089141845703
+Arrival Rate: 10 rps,40,OK,Message sent,0.0
+Arrival Rate: 10 rps,41,OK,Message sent,0.0
+Arrival Rate: 10 rps,42,OK,Message sent,0.0010182857513427734
+Arrival Rate: 10 rps,43,OK,Message sent,0.0
+Arrival Rate: 10 rps,44,OK,Message sent,0.0
+Arrival Rate: 10 rps,45,OK,Message sent,0.0
+Arrival Rate: 10 rps,46,OK,Message sent,0.0
+Arrival Rate: 10 rps,47,OK,Message sent,0.0
+Arrival Rate: 10 rps,48,OK,Message sent,0.0010569095611572266
+Arrival Rate: 10 rps,49,OK,Message sent,0.0011560916900634766
+Arrival Rate: 10 rps,50,OK,Message sent,0.0
+Arrival Rate: 50 rps,1,OK,Message sent,0.0
+Arrival Rate: 50 rps,2,OK,Message sent,0.0
+Arrival Rate: 50 rps,3,OK,Message sent,0.0012319087982177734
+Arrival Rate: 50 rps,4,OK,Message sent,0.0
+Arrival Rate: 50 rps,5,OK,Message sent,0.0005044937133789062
+Arrival Rate: 50 rps,6,OK,Message sent,0.0
+Arrival Rate: 50 rps,7,OK,Message sent,0.0005128383636474609
+Arrival Rate: 50 rps,8,OK,Message sent,0.0
+Arrival Rate: 50 rps,9,OK,Message sent,0.0
+Arrival Rate: 50 rps,10,OK,Message sent,0.0
+Arrival Rate: 50 rps,11,OK,Message sent,0.0
+Arrival Rate: 50 rps,12,OK,Message sent,0.0
+Arrival Rate: 50 rps,13,OK,Message sent,0.0
+Arrival Rate: 50 rps,14,OK,Message sent,0.0
+Arrival Rate: 50 rps,15,OK,Message sent,0.0
+Arrival Rate: 50 rps,16,OK,Message sent,0.0
+Arrival Rate: 50 rps,17,OK,Message sent,0.0010173320770263672
+Arrival Rate: 50 rps,18,OK,Message sent,0.0
+Arrival Rate: 50 rps,19,OK,Message sent,0.0
+Arrival Rate: 50 rps,20,OK,Message sent,0.0
+Arrival Rate: 50 rps,21,OK,Message sent,0.0
+Arrival Rate: 50 rps,22,OK,Message sent,0.0
+Arrival Rate: 50 rps,23,OK,Message sent,0.0
+Arrival Rate: 50 rps,24,OK,Message sent,0.0
+Arrival Rate: 50 rps,25,OK,Message sent,0.0
+Arrival Rate: 50 rps,26,OK,Message sent,0.0
+Arrival Rate: 50 rps,27,OK,Message sent,0.0
+Arrival Rate: 50 rps,28,OK,Message sent,0.0
+Arrival Rate: 50 rps,29,OK,Message sent,0.0
+Arrival Rate: 50 rps,30,OK,Message sent,0.0
+Arrival Rate: 50 rps,31,OK,Message sent,0.0
+Arrival Rate: 50 rps,32,OK,Message sent,0.0
+Arrival Rate: 50 rps,33,OK,Message sent,0.0005428791046142578
+Arrival Rate: 50 rps,34,OK,Message sent,0.0010132789611816406
+Arrival Rate: 50 rps,35,OK,Message sent,0.001012563705444336
+Arrival Rate: 50 rps,36,OK,Message sent,0.0
+Arrival Rate: 50 rps,37,OK,Message sent,0.0005910396575927734
+Arrival Rate: 50 rps,38,OK,Message sent,0.0
+Arrival Rate: 50 rps,39,OK,Message sent,0.0005156993865966797
+Arrival Rate: 50 rps,40,OK,Message sent,0.0005052089691162109
+Arrival Rate: 50 rps,41,OK,Message sent,0.0
+Arrival Rate: 50 rps,42,OK,Message sent,0.0
+Arrival Rate: 50 rps,43,OK,Message sent,0.0005023479461669922
+Arrival Rate: 50 rps,44,OK,Message sent,0.0
+Arrival Rate: 50 rps,45,OK,Message sent,0.0016484260559082031
+Arrival Rate: 50 rps,46,OK,Message sent,0.0010137557983398438
+Arrival Rate: 50 rps,47,OK,Message sent,0.0
+Arrival Rate: 50 rps,48,OK,Message sent,0.0005452632904052734
+Arrival Rate: 50 rps,49,OK,Message sent,0.0
+Arrival Rate: 50 rps,50,OK,Message sent,0.002027750015258789
+Data Type: Text,1,OK,Message sent,0.00101470947265625
+Data Type: Nested JSON,2,OK,Message sent,0.0010335445404052734
+Data Type: Binary,3,OK,Message sent,0.0010025501251220703
+Data Volume: Very Small,1,OK,Message sent,0.0010013580322265625
+Data Volume: Normal,2,OK,Message sent,0.0009992122650146484
+Data Volume: Extremely Large,3,OK,Message sent,0.012044429779052734
+Network Failure,307,OK,Message sent,
+Node Failure,308,OK,Message sent,

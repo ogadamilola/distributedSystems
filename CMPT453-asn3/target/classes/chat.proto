@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+package chat;
+
+option java_outer_classname = "ChatServiceOuterClass";
+
+// Define the ChatService
+service ChatService {
+    rpc CreateRoom (RoomRequest) returns (RoomResponse);
+    rpc ListRooms (Empty) returns (RoomList);
+    rpc JoinRoom (UserRoomRequest) returns (RoomResponse);
+    rpc LeaveRoom (UserRoomRequest) returns (RoomResponse);
+    rpc SendMessage (MessageRequest) returns (MessageResponse);
+    rpc GetMessages (RoomRequest) returns (MessageList);
+}
+
+// Define messages used in the service
+message RoomRequest {
+    string room_name = 1;
+}
+
+message RoomResponse {
+    bool success = 1;
+    string message = 2;
+}
+
+message Empty {}
+
+message RoomList {
+    repeated string rooms = 1;
+}
+
+message UserRoomRequest {
+    string room_name = 1;
+    string user_name = 2;
+}
+
+message MessageRequest {
+    string room_name = 1;
+    string user_name = 2;
+    string message = 3;
+}
+
+message MessageResponse {
+    bool success = 1;
+    string message = 2;
+}
+
+message MessageList {
+    repeated string messages = 1;
+}

@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  chat-server:
+    build:
+      context: .
+      dockerfile: Dockerfile.server
+    ports:
+      - "8080:8080"
+    networks:
+      - chat-network
+
+  chat-client:
+    build:
+      context: .
+      dockerfile: Dockerfile.client
+    depends_on:
+      - chat-server
+    stdin_open: true  # Keeps STDIN open for the container (interactive mode)
+    tty: true         # Allocates a pseudo-TTY for the container
+    networks:
+      - chat-network
+
+networks:
+  chat-network:
+    driver: bridge
