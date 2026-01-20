@@ -1,7 +1,32 @@
+Build and Start the Docker Containers
+Use Docker Compose to build and start the chat-server and chat-client.
+docker-compose up --build
+1. This command will:
+○ Build the Docker images for chat-server and chat-client.
+○ Start the chat-server container and a chat-client container connected to it.
+Running Multiple Clients:
+To simulate multiple clients, open new terminals and use the following command for each new
+client instance:
+docker-compose run -it chat-client
+Each new terminal will start a new chat-client instance connected to the same chat-server.
+Interacting with the Application
+Once a chat-client instance starts, you’ll see an interactive menu with the following options:
+1. Create Room
+2. List Rooms
+3. Join Room
+4. Leave Room
+5. Send Message
+6. View Messages
+0. Exit
+You can select options by entering the corresponding number.
+When you're done testing, you can stop all containers by pressing Ctrl+C in the terminal where
+docker-compose up was run, or by executing docker-compose down
+
 To run REST:
 Navigate to root and run docker-compose up - -build
 Once that is done, you can open another terminal in the directory and run flutter run -d chrome
 as many times as there are as many users you want to create
+
 
 Experiment Setup 
 The goal of the project is to evaluate the performance of REST and gRPC
