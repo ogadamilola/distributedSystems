@@ -7,10 +7,7 @@ Experiment Setup
 The goal of the project is to evaluate the performance of REST and gRPC
 protocols for a chatroom application. The experiment
 setup consists of the following components:
-Load Generator: A Python-based testing script is used to simulate multiple clients sending<img width="640" height="480" alt="large_payload_latency" src="https://github.com/user-attachments/assets/4a02497c-4aae-4c04-aa23-f25bdb78460e" />
-<img width="640" height="480" alt="small_payload_latency" src="https://github.com/user-attachments/assets/983abdb8-baf6-438a-97bd-1a330a5d35b2" />
-<img width="640" height="480" alt="concurrent_requests_grpc_latency" src="https://github.com/user-attachments/assets/1014edfb-2ee0-40fb-9ee5-dc95a36a5830" />
-<img width="1080" height="1080" alt="grpcResults png" src="https://github.com/user-attachments/assets/2b4a3ad7-f4db-46ee-900c-7f7499b8ffbd" />
+Load Generator: A Python-based testing script is used to simulate multiple clients sending
 
 requests to the chatroom server. It supports concurrency, arrival rate adjustments, and payload
 customization. For gRPC, the grpcio library is used, and for REST, the requests library is used.
@@ -66,6 +63,10 @@ Y Axis: Latency (s): Measures the time taken in seconds for the server to respon
 request.
 
 <img width="1080" height="1080" alt="restResults png" src="https://github.com/user-attachments/assets/f249d0ac-ce05-49ac-9804-fcccf31df280" />
+<img width="640" height="480" alt="large_payload_latency" src="https://github.com/user-attachments/assets/4a02497c-4aae-4c04-aa23-f25bdb78460e" />
+<img width="640" height="480" alt="small_payload_latency" src="https://github.com/user-attachments/assets/983abdb8-baf6-438a-97bd-1a330a5d35b2" />
+<img width="640" height="480" alt="concurrent_requests_grpc_latency" src="https://github.com/user-attachments/assets/1014edfb-2ee0-40fb-9ee5-dc95a36a5830" />
+<img width="1080" height="1080" alt="grpcResults png" src="https://github.com/user-attachments/assets/2b4a3ad7-f4db-46ee-900c-7f7499b8ffbd" />
 
 
 
