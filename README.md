@@ -1,0 +1,109 @@
+To run REST:
+Navigate to root and run docker-compose up - -build
+Once that is done, you can open another terminal in the directory and run flutter run -d chrome
+as many times as there are as many users you want to create
+
+Experiment Setup 
+The goal of the project is to evaluate the performance of REST and gRPC
+protocols for a chatroom application. The experiment
+setup consists of the following components:
+Load Generator: A Python-based testing script is used to simulate multiple clients sending<img width="640" height="480" alt="large_payload_latency" src="https://github.com/user-attachments/assets/4a02497c-4aae-4c04-aa23-f25bdb78460e" />
+<img width="640" height="480" alt="small_payload_latency" src="https://github.com/user-attachments/assets/983abdb8-baf6-438a-97bd-1a330a5d35b2" />
+<img width="640" height="480" alt="concurrent_requests_grpc_latency" src="https://github.com/user-attachments/assets/1014edfb-2ee0-40fb-9ee5-dc95a36a5830" />
+<img width="1080" height="1080" alt="grpcResults png" src="https://github.com/user-attachments/assets/2b4a3ad7-f4db-46ee-900c-7f7499b8ffbd" />
+
+requests to the chatroom server. It supports concurrency, arrival rate adjustments, and payload
+customization. For gRPC, the grpcio library is used, and for REST, the requests library is used.
+Each script consists of the following functions:
+● create_chatroom(chatroom_name)
+● send_message(payload)
+● test_small_payload(num_requests), test_large_payload(num_requests)
+● test_concurrent_requests(num_requests, num_threads)
+○ simulate_client(client_id)
+● send_message_with_retry(payload, retries=3)
+● send_message_with_server_check(payload)
+● test_arrival_rates(num_requests, rate)
+● test_data_types()
+● test_data_volume()
+
+The chatroom server is implemented separately for REST and gRPC protocols. The REST
+server was built with flutter and uses HTTP-based endpoints to handle requests such as
+creating a chat room, sending messages, and retrieving chatroom data. The gRPC server uses
+Protocol Buffers to define the service and message structures. It supports bi-directional
+communication with a strongly-typed contract.
+
+Both servers run on a local machine. The testing script communicates with the servers through
+localhost:8080. For failure scenarios, the server is manually stopped or restarted to simulate
+node failures, while retry logic simulates network instability.
+
+Experiments: 
+The experiments are designed to measure the performance and robustness of
+REST and gRPC under various conditions. The experiments include:
+Small Payloads: Measuring the latency of small text messages. This provides a baseline for the
+best-case scenario for both protocols.
+Large Payloads: Measuring the impact of larger payloads (10KB and 1MB) on latency and
+throughput. This evaluates how REST and gRPC handle serialization and deserialization
+overhead.
+Concurrent Requests: Measuring the scalability of the server under concurrent requests using
+10 simulated clients sending 50 requests. This helps compare the threading efficiency of REST
+and gRPC servers.
+Varying Arrival Rates: Tests server performance under controlled arrival rates (1, 10, 50
+requests per second). This assesses the server's ability to handle sustained traffic and prevent
+request drops.
+Network Failures: Testing the resilience of REST and gRPC under transient network failures by
+introducing retries and exponential backoff. Here we measure recovery times and successful
+retries under poor network conditions.
+Node Failures: Simulate a server crash or downtime while clients are sending requests.
+Captures client behavior during server unavailability, including retry logic and error handling.
+Data Types: Evaluate how REST and gRPC handle different data formats (e.g., plain text,
+nested JSON, binary). Highlights protocol differences in serialization and performance.
+
+
+Data Interpretation
+X Axis: Request ID: Represents the sequence of requests sent to the server. Each request has
+a unique identifier (request_id) that tracks when it was sent during the test.
+Y Axis: Latency (s): Measures the time taken in seconds for the server to respond to a specific
+request.
+
+<img width="1080" height="1080" alt="restResults png" src="https://github.com/user-attachments/assets/f249d0ac-ce05-49ac-9804-fcccf31df280" />
+
+
+
+Overall Results
+The comparison between gRPC and REST demonstrates a performance advantage for
+gRPC in terms of latency, scalability, and throughput. Across all test cases, gRPC consistently
+exhibited lower latency and better efficiency, particularly under concurrent loads. REST
+struggled to match gRPC's performance due to its reliance on JSON serialization and the
+additional overhead of HTTP-based communication. gRPC achieved higher throughput due to
+its use of HTTP/2, which supports multiplexing and reduces connection overhead. The binary
+serialization of Protocol Buffers is lightweight and faster, minimizing serialization and
+deserialization overhead. REST achieved lower throughput as each request incurs significant
+overhead from text-based JSON serialization and the stateless nature of HTTP/1.1. REST also
+experiences higher latency and more frequent spikes, especially under heavy loads or
+concurrent requests.
+Higher peaks in REST are caused by the overhead of establishing new HTTP
+connections for each request, JSON serialization/deserialization, and thread contention under
+concurrent loads. gRPC Spikes occur due to initial connection setup and increased server-side
+load during high concurrency or payload processing. In both cases, resource contention and
+serialization overhead play significant roles in latency fluctuations. However, gRPC handles
+these better due to its binary format and persistent connections.In scenarios requiring high
+throughput and minimal overhead, gRPC is the better choice.
+For both protocols, N clients were simulated using threads in the testing scripts. In
+gRPC, each thread creates a unique client connection using the grpcio library. HTTP/2's support
+for multiplexing makes it more efficient in managing multiple connections. For REST, each
+thread uses a requests.Session to represent an independent client. However, the stateless
+nature of REST requires creating a new connection for each request, leading to higher
+overhead. The ability to handle multiple clients concurrently was noticeably better in gRPC due
+to its efficient connection management and support for streaming.
+gRPC shows off its strength in low latency and high efficiency, especially for concurrent
+and large payloads. It also supports bi-directional streaming, making it ideal for real-time
+applications. However, it is more complex to set up due to the need for .proto files and a higher
+learning curve for developers unfamiliar with Protocol Buffers. REST is very simple and is widely
+used and supported across platforms. The human-readable JSON also makes it easier for
+debugging and testing. Its statelessness makes it more scalable in certain scenarios, such as
+distributed systems where each request must be independent. It does suffer from higher latency
+and lower throughput due to the overhead of JSON serialization and HTTP/1.1, and is less
+efficient under high concurrency or heavy payloads. gRPC is ideal for performance-intensive,
+real-time systems, while REST excels in flexibility, simplicity, and broad compatibility. The choice
+between them depends on the specific needs of the application, balancing performance
+requirements with development and operational simplicity.
